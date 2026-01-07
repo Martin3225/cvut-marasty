@@ -2,9 +2,145 @@
     "subjects": [
         {
             "id": 1,
-            "name": "Mathematics",
-            "description": "The study of numbers, quantities, shapes, and patterns.",
-            "code": "MATH101"
+            "name": "Diskrétní Matematika a Logika",
+            "code": "dml",
+            "description": "Popis dml",
+            "primaryColor": "#34e1ed",
+            "secondaryColor": "#2e8d94",
+            "topics": [
+                {
+                    "id": "kombinatorika",
+                    "name": "Kombinatorika"
+                },
+                {
+                    "id": "logika",
+                    "name": "Logika"
+                },
+                {
+                    "id": "mnoziny",
+                    "name": "Množiny"
+                },
+                {
+                    "id": "pravdepodobnost",
+                    "name": "Pravděpodobnost"
+                },
+                {
+                    "id": "relace",
+                    "name": "Relace"
+                },
+                {
+                    "id": "teorie-cisel",
+                    "name": "Teorie čísel"
+                },
+                {
+                    "id": "zobrazeni",
+                    "name": "Zobrazení"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Automaty a Gramatiky",
+            "code": "aag",
+            "description": "Popis aag",
+            "primaryColor": "#34e1ed",
+            "secondaryColor": "#2e8d94",
+            "topics": [
+                {
+                    "id": "bezkontextove-gramatiky",
+                    "name": "Bezkontextové gramatiky"
+                },
+                {
+                    "id": "formalni-jazyky-gramatiky-a-jejich-klasifikace",
+                    "name": "Formální jazyky, gramatiky a jejich klasifikace"
+                },
+                {
+                    "id": "formalni-preklady",
+                    "name": "Formální překlady"
+                },
+                {
+                    "id": "kontextove-jazyky",
+                    "name": "Kontextové jazyky"
+                },
+                {
+                    "id": "regularni-jazyky",
+                    "name": "Regulární jazyky"
+                },
+                {
+                    "id": "rekurzivne-spocetne-jazyky",
+                    "name": "Rekurzivně spočetné jazyky"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Matematická Analýza 2",
+            "code": "ma2",
+            "description": "Popis ma2",
+            "primaryColor": "#34e1ed",
+            "secondaryColor": "#2e8d94",
+            "topics": [
+                {
+                    "id": "0102-rozstrel",
+                    "name": "01.02. Rozstřel"
+                },
+                {
+                    "id": "01022023-rozstrel",
+                    "name": "01.02.2023 Rozstřel"
+                },
+                {
+                    "id": "0401-rozstrel",
+                    "name": "04.01. Rozstřel"
+                },
+                {
+                    "id": "04012023-rozstrel",
+                    "name": "04.01.2023 Rozstřel"
+                },
+                {
+                    "id": "08022024-rozstrel",
+                    "name": "08.02.2024 Rozstřel"
+                },
+                {
+                    "id": "22012025-rozstrel",
+                    "name": "22.01.2025 Rozstřel"
+                },
+                {
+                    "id": "2501-rozstrel",
+                    "name": "25.01. Rozstřel"
+                },
+                {
+                    "id": "29012025-rozstrel",
+                    "name": "29.01.2025 Rozstřel"
+                },
+                {
+                    "id": "ciselne-a-mocninne-rady",
+                    "name": "Číselné a mocninné řady"
+                },
+                {
+                    "id": "diferencialni-pocet-funkci-vice-promennych",
+                    "name": "Diferenciální počet funkcí více proměnných"
+                },
+                {
+                    "id": "linearni-rekurentni-rovnice",
+                    "name": "Lineární rekurentní rovnice"
+                },
+                {
+                    "id": "neurcity-integral-a-primitivni-funkce",
+                    "name": "Neurčitý integrál a primitivní funkce"
+                },
+                {
+                    "id": "taylorovy-polynomy-rady-a-veta",
+                    "name": "Taylorovy polynomy, řady a věta"
+                },
+                {
+                    "id": "uncategorized",
+                    "name": "Uncategorized"
+                },
+                {
+                    "id": "urcity-integral",
+                    "name": "Určitý integrál"
+                }
+            ]
         }
     ]
 }

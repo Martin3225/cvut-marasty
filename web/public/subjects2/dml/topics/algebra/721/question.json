@@ -1,0 +1,23 @@
+{
+    "question": "DML Otazka",
+    "questionType": "multichoice",
+    "topic": "algebra",
+    "answers": [
+        {
+            "text": "$01^{p}1^{p}0$",
+            "isCorrect": false
+        },
+        {
+            "text": "$0^{p}0^{p}$",
+            "isCorrect": false
+        },
+        {
+            "text": "$2^{p}332^{p}$",
+            "isCorrect": true
+        },
+        {
+            "text": "$0110$",
+            "isCorrect": false
+        }
+    ]
+}

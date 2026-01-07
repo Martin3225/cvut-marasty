@@ -1,0 +1,25 @@
+{
+    "name": "Dml",
+    "code": "dml",
+    "description": "An introductory course to fundamental mathematical concepts including algebra, calculus, and geometry.",
+    "primaryColor": "#34e1ed",
+    "secondaryColor": "#2e8d94",
+    "icon": "math-icon.svg",
+    "topics": [
+        {
+            "id": "number-theory",
+            "name": "Number Theory",
+            "description": "Study of mathematical symbols and rules for manipulating these symbols."
+        },
+        {
+            "id": "calculus",
+            "name": "Calculus",
+            "description": "Study of change and motion, through derivatives and integrals."
+        },
+        {
+            "id": "geometry",
+            "name": "Geometry",
+            "description": "Study of shapes, sizes, and properties of space."
+        }
+    ]
+}

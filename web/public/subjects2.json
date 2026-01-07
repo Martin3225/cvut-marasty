@@ -1,0 +1,16 @@
+{
+    "subjects": [
+        {
+            "id": 1,
+            "name": "Mathematics",
+            "description": "The study of numbers, quantities, shapes, and patterns.",
+            "code": "ma1"
+        },
+        {
+            "id": 2,
+            "name": "Computer Science",
+            "description": "The study of computers and computational systems.",
+            "code": "dml"
+        }
+    ]
+}

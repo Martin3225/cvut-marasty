@@ -1,0 +1,25 @@
+{
+    "name": "Mathematics I",
+    "code": "ma1",
+    "description": "An introductory course to fundamental mathematical concepts including algebra, calculus, and geometry.",
+    "primaryColor": "#aa07f5",
+    "secondaryColor": "#3B82F6",
+    "icon": "math-icon.svg",
+    "topics": [
+        {
+            "id": "algebra",
+            "name": "Algebra",
+            "description": "Study of mathematical symbols and rules for manipulating these symbols."
+        },
+        {
+            "id": "calculus",
+            "name": "Calculus",
+            "description": "Study of change and motion, through derivatives and integrals."
+        },
+        {
+            "id": "geometry",
+            "name": "Geometry",
+            "description": "Study of shapes, sizes, and properties of space."
+        }
+    ]
+}
