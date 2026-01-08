@@ -1,0 +1,19 @@
+{
+    "question": "Regulární výraz je:",
+    "questionType": "multichoice",
+    "answers": [
+        {
+            "text": "$X^* \\in A$",
+            "isCorrect": true
+        },
+        {
+            "text": "Další",
+            "isCorrect": false
+        }
+    ],
+    "topics": [
+        "Regulární jazyky",
+        "google-doc"
+    ],
+    "originalText": "79) Regulární výraz je:\nb) X*∈A;  \nc) další\nA       ."
+}

@@ -1,0 +1,27 @@
+{
+    "question": "Metodou derivací regulárního výrazu vznikne:",
+    "questionType": "multichoice",
+    "answers": [
+        {
+            "text": "konečný automat",
+            "isCorrect": true
+        },
+        {
+            "text": "deterministický KA",
+            "isCorrect": true
+        },
+        {
+            "text": "minimální KA",
+            "isCorrect": false
+        },
+        {
+            "text": "homogenní KA",
+            "isCorrect": false
+        }
+    ],
+    "topics": [
+        "Regulární jazyky",
+        "google-doc"
+    ],
+    "originalText": "82) Metodou derivací regulárního výrazu vznikne:\na) konečný automat\nb) deterministický KA  \nc) minimální KA\nd) homogenní KA\nA,B      ."
+}
