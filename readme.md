@@ -2,6 +2,13 @@
 
 Toto repo shromažďuje otázky pro přípravu na rozstřely na FIT ČVUT.
 
+## Jak přidat otázky?
+1. Vytvořte **fork** tohoto repozitáře.
+2. Přidejte své otázky dle struktury popsané níže.
+3. Po dokončení změn vytvořte **pull request**.
+4. V CI proběhnou automatické kontroly správnosti JSON souborů a jejich umístění.
+5. Otázky (resp. jejich složky) pojmenovávejte náhodným **8místným číslem** (je to limitace, ale asi nejelegantnější řešení, který mě napadlo).
+
 ## Struktura repozitáře
 
 Data jsou uložena v adresáři `questions/` v následující hierarchii:
@@ -88,9 +95,9 @@ Každá složka s otázkou obsahuje soubor `question.json` se samotným zadání
 
 ---
 
-## Multimédia
+## Média
 
 Složka s otázkou může obsahovat volitelné soubory:
-- `image.png`: Obrázek, který se zobrazí přímo pod textem zadání.
-- `quiz.png`: Obrázek, který se zobrazí v oblasti odpovědí (např. graf automatu).
+- `image.png`: Obrázek, který se zobrazí přímo pod textem zadání (může se využít např. pro zadání, které obsahuje obrázek grafu).
+- `quiz.png`: Obrázek, který obsahuje screenshot z marastu / zadání. (Při mass scrapování otázek, využíváno pro lehčí kontrolu)
 
