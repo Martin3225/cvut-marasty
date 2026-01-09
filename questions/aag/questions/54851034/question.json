@@ -1,5 +1,5 @@
 {
-    "question": "Nechť $L$ je neprázdný jazyk nad abecedou $\\Sigma$. O každém z následujících tvrzení rozhodněte, zdali je pravdivé ($\\checkmark$), nebo nepravdivé ($\\times$). ($L^R$ značí jazyk $L^R = \\{w^R : w \\in L\\}. Pokud je $L$ nekonečný jazyk, pak $|L| = \\infty$, přičemž \\infty + \\infty = \\infty$.)",
+    "question": "Nechť $L$ je neprázdný jazyk nad abecedou $\\Sigma$. O každém z následujících tvrzení rozhodněte, zdali je pravdivé ($\\checkmark$), nebo nepravdivé ($\\times$). ($L^R$ značí jazyk $L^R = \\{w^R : w \\in L\\}$. Pokud je $L$ nekonečný jazyk, pak $|L| = \\infty$, přičemž $\\infty + \\infty = \\infty$.)",
     "answers": [
         {
             "text": "Existuje $L$ takový, že $|L^R| > |L|$.",
