@@ -3,7 +3,7 @@
     "answers": [
         {
             "text": "Tvrzení $T$ není pravdivé, z čehož plyne, že $L$ musí být regulární jazyk.",
-            "isCorrect": true
+            "isCorrect": false
         },
         {
             "text": "Tvrzení $T$ je pravdivé, z čehož plyne, že $L$ musí být regulární jazyk.",
