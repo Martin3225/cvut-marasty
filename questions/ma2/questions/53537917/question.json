@@ -6,7 +6,7 @@
             "isCorrect": false
         },
         {
-            "text": "$T_{n,a}(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(x)}{k!} (x - a)^k$",
+            "text": "$T_{n,a}(x) = \\sum_{k=0}^{n} \\frac{f^{k}(x)}{k!} (x - a)^k$",
             "isCorrect": false
         },
         {
