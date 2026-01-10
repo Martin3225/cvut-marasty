@@ -15,7 +15,7 @@
         },
         {
             "text": "Pro $M$ vždy platí, že všechny stavy jsou zbytečné.",
-            "isCorrect": true
+            "isCorrect": false
         }
     ],
     "topics": [
