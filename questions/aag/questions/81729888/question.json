@@ -4,7 +4,7 @@
     "answers": [
         {
             "text": "Existuje $V$ takový, že $M$ bude obsahovat více počátečních stavů.",
-            "isCorrect": true
+            "isCorrect": false
         },
         {
             "text": "Existuje $V$ takový, že výsledný $M$ bude nedeterministický konečný automat.",
@@ -16,7 +16,7 @@
         },
         {
             "text": "Pro všechny $V$ bude výsledný $M$ vždy minimální deterministický konečný automat.",
-            "isCorrect": false
+            "isCorrect": true
         }
     ],
     "topics": [
