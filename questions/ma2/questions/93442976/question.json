@@ -7,7 +7,7 @@
         },
         {
             "text": "$\\displaystyle \\int_0^1 \\int_0^x xy \\, dy \\, dx$",
-            "isCorrect": true
+            "isCorrect": false
         },
         {
             "text": "Objem je 1",
