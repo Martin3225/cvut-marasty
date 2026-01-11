@@ -6,47 +6,71 @@ interface Contributor {
     login: string;
     avatar_url: string;
     html_url: string;
-    contributions: number;
+    contributions?: number;
 }
 
-function Contributors() {
-    const [contributors, setContributors] = useState<Contributor[]>([]);
-    const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+interface ContributorsData {
+    contributors: Contributor[];
+    reporters: Contributor[];
+}
 
-    useEffect(() => {
-        fetch(`${BASE_PATH}/contributors.json`)
-            .then(res => res.json())
-            .then(data => setContributors(data))
-            .catch(err => console.error('Failed to load contributors', err));
-    }, []);
-
-    if (contributors.length === 0) return null;
+function ContributorGroup({ title, users, highlight = false }: { title: string, users: Contributor[], highlight?: boolean }) {
+    if (users.length === 0) return null;
 
     return (
-        <div className="mt-16">
-            <h2 className="mb-6 text-xl font-semibold opacity-80">Přispěvatelé</h2>
+        <div className="mt-12">
+            <h2 className={`mb-6 text-xl font-semibold opacity-80 ${highlight ? 'text-[var(--subject-primary)]' : ''}`}>
+                {title}
+            </h2>
             <div className="flex flex-wrap justify-center gap-4">
-                {contributors.map(c => (
+                {users.map(c => (
                     <a
                         key={c.login}
                         href={c.html_url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative"
-                        title={`${c.login} (${c.contributions} příspěvků)`}
+                        title={c.contributions ? `${c.login} (${c.contributions} příspěvků)` : c.login}
                     >
                         <img
                             src={c.avatar_url}
                             alt={c.login}
-                            className="w-12 h-12 rounded-full transition-all duration-300 group-hover:scale-110 shadow-sm"
+                            className={`rounded-full transition-all duration-300 group-hover:scale-110 shadow-sm ${highlight ? 'w-14 h-14 border-2 border-[var(--subject-primary)]' : 'w-12 h-12 border-2 border-transparent'}`}
                         />
-                        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-[var(--surface-color)] text-[var(--fg-primary)] text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-[var(--surface-color)] text-[var(--fg-primary)] text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 border border-[var(--border-color)] shadow-xl">
                             {c.login}
                         </div>
                     </a>
                 ))}
             </div>
         </div>
+    );
+}
+
+function Recognition() {
+    const [data, setData] = useState<ContributorsData | null>(null);
+    const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+    useEffect(() => {
+        fetch(`${BASE_PATH}/contributors.json`)
+            .then(res => res.json())
+            .then(val => {
+                if (Array.isArray(val)) {
+                    setData({ contributors: val, reporters: [] });
+                } else {
+                    setData(val);
+                }
+            })
+            .catch(err => console.error('Failed to load recognition data', err));
+    }, [BASE_PATH]);
+
+    if (!data) return null;
+
+    return (
+        <>
+            <ContributorGroup title="Přispěvatelé" users={data.contributors} highlight />
+            <ContributorGroup title="Nahlásili chybu" users={data.reporters} />
+        </>
     );
 }
 
@@ -76,7 +100,14 @@ function GitHubStarButton() {
             </a>
 
             {/* Arrow pointing to button from the right */}
-            <div className="absolute left-full ml-6 hidden md:block w-20 h-20 opacity-30 group-hover/container:opacity-80 transition-all duration-500 scale-x-[-1] -rotate-12 pointer-events-none">
+            <div className="rotate-10 absolute left-full ml-6 hidden md:block w-20 h-20 opacity-30 group-hover/container:opacity-80 transition-all duration-500 scale-x-[-1] -rotate-12 pointer-events-none">
+                <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full stroke-[var(--subject-primary)]">
+                    <path d="M56 270.5C56 256.429 79.5553 218.859 120.902 197.186C162.249 175.512 194.07 164.5 242.113 164.5C274.142 164.5 306.771 175.395 340 197.186" stroke="currentColor" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="16 32" />
+                    <path d="M325.63 129C337.877 172.588 344 195.072 344 196.45C344 198.518 308.436 212.998 292 235" stroke="currentColor" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            </div>
+
+            <div className="rotate-170 absolute right-full mr-6 hidden md:block w-20 h-20 opacity-30 group-hover/container:opacity-80 transition-all duration-500 scale-x-[-1] -rotate-12 pointer-events-none">
                 <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full stroke-[var(--subject-primary)]">
                     <path d="M56 270.5C56 256.429 79.5553 218.859 120.902 197.186C162.249 175.512 194.07 164.5 242.113 164.5C274.142 164.5 306.771 175.395 340 197.186" stroke="currentColor" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="16 32" />
                     <path d="M325.63 129C337.877 172.588 344 195.072 344 196.45C344 198.518 308.436 212.998 292 235" stroke="currentColor" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
@@ -95,7 +126,7 @@ export function About() {
             </h1>
 
             <p className="mb-10 text-xl text-[var(--fg-muted)] leading-relaxed">
-                Toto repo se snaží zshromažďovat otázky, z předmětů na FIT ČVUT. Cílím je zabránit tomu, co se děje na fitiwki (20 různých souborů s otázkami, různé formáty, neaktuální data, atd.) a vytvořit jednotný zdroj pro otázky.
+                Toto repo se snaží zshromažďovat otázky, z předmětů na FIT ČVUT. Cílem je zabránit tomu, co se děje na fitiwki (20 různých souborů s otázkami, různé formáty, neaktuální data, atd.) a vytvořit jednotný zdroj pro otázky.
 
                 <br /><br />
                 Proto pokud najdete jakoukoliv chybu, nahlašte ji prosím přes <a href="https://github.com/skopevoj/cvut-marasty/issues" className="text-[var(--subject-primary)] hover:underline font-medium" target="_blank" rel="noopener noreferrer">GitHub Issues</a> nebo ještě lépe, přispějte opravou sami přes <a href="https://github.com/skopevoj/cvut-marasty/pulls" className="text-[var(--subject-primary)] hover:underline font-medium" target="_blank" rel="noopener noreferrer">GitHub Pull Requests</a>.
@@ -105,7 +136,7 @@ export function About() {
                 <GitHubStarButton />
             </div>
 
-            <Contributors />
+            <Recognition />
         </div>
     );
 }
