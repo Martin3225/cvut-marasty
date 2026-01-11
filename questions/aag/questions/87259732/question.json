@@ -3,7 +3,7 @@
     "answers": [
         {
             "text": "Existuje konečný jazyk $L$ takový, že $\\overline{L}$ je konečný jazyk.",
-            "isCorrect": true
+            "isCorrect": false
         },
         {
             "text": "Počáteční konfigurace konečného automatu $M = (Q, \\Sigma, \\delta, q_0, F)$ je definována jako $(q_0, \\epsilon)$.",
