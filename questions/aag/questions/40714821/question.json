@@ -3,7 +3,7 @@
     "answers": [
         {
             "text": "Všechny derivace v $G$ jsou nejvýše délky 2.",
-            "isCorrect": true
+            "isCorrect": false
         },
         {
             "text": "Všechny řetězce generované gramatikou $G$ jsou nejvýše délky 2.",
@@ -15,7 +15,7 @@
         },
         {
             "text": "$G$ obsahuje levou rekurzi.",
-            "isCorrect": false
+            "isCorrect": true
         }
     ],
     "topics": [
