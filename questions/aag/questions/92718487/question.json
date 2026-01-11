@@ -15,7 +15,7 @@
         },
         {
             "text": "Existuje konečný jazyk $L$ takový, že $\\overline{L}$ je konečný jazyk.",
-            "isCorrect": true
+            "isCorrect": false
         }
     ],
     "topics": [
