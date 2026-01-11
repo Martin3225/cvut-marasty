@@ -17,10 +17,6 @@
         {
             "text": "$L = \\{ a^m, m \\ge 0 \\}$",
             "isCorrect": false
-        },
-        {
-            "text": "Nic",
-            "isCorrect": true
         }
     ],
     "topics": [
