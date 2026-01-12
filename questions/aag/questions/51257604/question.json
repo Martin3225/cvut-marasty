@@ -7,11 +7,11 @@
         },
         {
             "text": "Tvrzení $T$ není pravdivé, z čehož plyne, že $L$ určitě není regulární jazyk.",
-            "isCorrect": false
+            "isCorrect": true
         },
         {
             "text": "Tvrzení $T$ není pravdivé.",
-            "isCorrect": false
+            "isCorrect": true
         },
         {
             "text": "Tvrzení $T$ není pravdivé, z čehož plyne, že $L$ určitě není bezkontextový jazyk.",

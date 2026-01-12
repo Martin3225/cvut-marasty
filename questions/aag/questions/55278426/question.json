@@ -1,5 +1,5 @@
 {
-    "question": "Uvažujte bezkontextovou gramatiku $G = (N, \\Sigma, P, S)$. O každém z následujících tvrzení rozhodněte, zdali je pravdivé (\\checkmark) či nepravdivé (\\times):",
+    "question": "Uvažujte bezkontextovou gramatiku $G = (N, \\Sigma, P, S)$. O každém z následujících tvrzení rozhodněte, zdali je pravdivé ($\\checkmark$) či nepravdivé ($\\times$):",
     "answers": [
         {
             "text": "Zbytečným symbolem může být pouze neterminální symbol $A \\in N$. Terminální symboly $a \\in \\Sigma$ jsou vždy užitečné.",

@@ -17,10 +17,6 @@
         {
             "text": "Každá věta z jazyka má více než jeden derivační strom v nějaké gramatice generující daný jazyk.",
             "isCorrect": false
-        },
-        {
-            "text": "Nic.",
-            "isCorrect": true
         }
     ],
     "topics": [
